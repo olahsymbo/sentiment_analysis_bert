@@ -3,7 +3,7 @@
 """
 Created on Tue Feb 18 09:16:14 2020
 
-@author: o.arigbabu
+@author: o.arigbabu.
 """
 
 from sklearn.metrics import accuracy_score

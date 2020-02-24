@@ -2,7 +2,7 @@
 """
 Created on Sun Apr  7 20:59:22 2019
 
-@author: olahs
+@author: olahs.
 """
 import os
 import sys
