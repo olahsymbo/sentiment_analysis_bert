@@ -1,18 +1,13 @@
-# Sentiment_Analysis
-Project on Sentiment Analysis of tweets. 
+## Sentiment_Analysis
 
-Tweets are classified into positive, negative, and neutral sentiments with Bayesian and Random Forest Classifier. 
+Project on Sentiment Analysis of tweets. Tweets are classified into positive, negative, and neutral sentiments with Bayesian and Random Forest Classifier. TfidfVectorizer is used for encoding after tweet preprocessing and STOP WORDS extraction
 
-TfidfVectorizer is used for encoding after tweet preprocessing and STOP WORDS extraction
+### Guidelines
 
-# Guidelines
-Use SentimentData.csv containing Positive, Negative, and Neutral Tweets.
+- Use the dataset in SentimentData.csv which contains Positive, Negative, and Neutral Tweets.
 
-Filter Tweets to remove @ # RT
+- Filter Tweets to remove @ # RT
 
-Use TfidfVectorizer to encode (extract features) the clean Tweets
+- Use TfidfVectorizer to encode (extract features) the clean Tweets
 
-Predict using Naive Bayes Classifier or Random Forest.
-
-We also generated word cloud. .!!
-
+- Predict using Naive Bayes Classifier or Random Forest.
