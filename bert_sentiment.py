@@ -61,16 +61,22 @@ target[target == 'Positive'] = 1
 target[target == 'Negative'] = -1
 target[target == 'Neutral'] = 0
 
+labels = []
+clean_tweets_df = []
+for i in range(len(clean_tweets)):
+    if clean_tweets[i] != '':
+        clean_tweets_df.append(clean_tweets[i])
+        labels.append(target[i])
 
-X_trainn, X_testt, y_train, y_test = train_test_split(clean_tweets, target.astype(int),
+X_trainn, X_testt, y_train, y_test = train_test_split(clean_tweets_df, labels,
                                                       random_state=42, test_size=0.3)
 
 # -------------------------BERT Model -------------------------------------#
 print("starting BERT")
-bc = BertClient(ip="SERVER_IP_HERE")
+bc = BertClient()
 # get the embedding
-X_train_bert = bc.encode(X_trainn.tolist())
-X_test_bert = bc.encode(X_testt.tolist())
+X_train_bert = [bc.encode([row]) for row in X_trainn]
+X_test_bert = [bc.encode([row]) for row in X_testt]
 
 
 # -------------------------DNN --------------------------------------------#
